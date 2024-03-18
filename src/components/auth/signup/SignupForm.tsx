@@ -4,8 +4,8 @@ import Button from '../../common/Button';
 import { SignupAuthFormData } from '../../../types/auth';
 import { SignupAuthSchema } from '../../../schemas/auth.schemas';
 import SignupFormField from './SignupFormField';
-import useSignup from '../../../hooks/auth/useSignup';
 import ErrorMessage from '../../common/ErrorMessage';
+import useSignup from '../../../hooks/auth/useSignup';
 
 const SignupForm = () => {
   const {

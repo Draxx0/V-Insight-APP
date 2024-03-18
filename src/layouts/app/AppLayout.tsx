@@ -1,10 +1,13 @@
 import AppHeader from './AppHeader';
+import TabsLayout from './TabsLayout';
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="p-8">
       <AppHeader />
-      <main className="text-white">{children}</main>
+      <TabsLayout>
+        <main className="text-white">{children}</main>
+      </TabsLayout>
     </div>
   );
 };
