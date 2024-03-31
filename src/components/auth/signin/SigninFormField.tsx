@@ -1,4 +1,4 @@
-import { INPUT_CLASSES } from '../../../constants/ui/classes.constants';
+import { INPUT_CLASSES } from '../../../constants';
 import { SigninAuthFormFieldProps } from '../../../types/auth';
 
 const SigninFormField: React.FC<SigninAuthFormFieldProps> = ({

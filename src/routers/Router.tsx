@@ -4,6 +4,7 @@ import SigninPage from '../pages/auth/Signin';
 import MatchesPage from '../pages/Matches';
 import AuthPage from '../pages/auth/AuthPage';
 import ProtectedRoute from './ProtectedRoute';
+import StatsPage from '../pages/Stats';
 
 const Router = () => {
   return (
@@ -16,6 +17,8 @@ const Router = () => {
           </ProtectedRoute>
         }
       />
+
+      <Route path="/stats" element={<StatsPage />} />
 
       <Route path="/auth" element={<AuthPage />} />
       <Route path="/auth/signup" element={<SignupPage />} />

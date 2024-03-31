@@ -1,7 +1,8 @@
-import { RotateCw } from 'lucide-react';
 import { useAccountStore } from '../../store/account.store';
-import { FALLBACK_CARD } from '../../constants/ui/fallbacks.constants';
 import Separator from '../../components/common/Separator';
+import { FALLBACK_CARD } from '../../constants';
+import Avatar from '../../components/containers/Avatar';
+import ReloadData from '../../components/containers/UpdataData';
 
 const AppHeader = () => {
   const { account } = useAccountStore();
@@ -23,11 +24,9 @@ const AppHeader = () => {
               <p className="text-neutral-500 text-2xl">#4005</p>
             </div>
 
-            <div className="bg-ice-cold/10 py-2 px-4 flex items-center hover:bg-ice-cold/30 transition-all duration-300 ease-in-out text-ice-cold cursor-pointer group gap-2 rounded-full">
-              <RotateCw size={14} />
-              <p className="uppercase font-bold tracking-widest text-sm">
-                Update
-              </p>
+            <div className="flex items-center gap-3">
+              <ReloadData />
+              <Avatar />
             </div>
           </div>
           <Separator />
