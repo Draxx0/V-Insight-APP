@@ -1,6 +1,6 @@
 import AppLayout from '../layouts/app/AppLayout';
 
-const StatsPage = () => {
+const UnratedPage = () => {
   return (
     <AppLayout>
       <h1>Stats Page</h1>
@@ -8,4 +8,4 @@ const StatsPage = () => {
   );
 };
 
-export default StatsPage;
+export default UnratedPage;

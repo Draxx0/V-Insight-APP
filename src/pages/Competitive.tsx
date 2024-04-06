@@ -1,6 +1,6 @@
 import AppLayout from '../layouts/app/AppLayout';
 
-const MatchesPage = () => {
+const CompetitivePage = () => {
   return (
     <AppLayout>
       <div className="flex">
@@ -9,8 +9,8 @@ const MatchesPage = () => {
             <div className="space-y-2">
               <p>Top Agent</p>
               <div className="space-y-2">
-                <div className="flex">
-                  <img src="" alt="" />
+                <div className="flex gap-4">
+                  <img src="https://via.placeholder.com/30" alt="" />
                   <div className="space-y-1">
                     <p>Jett</p>
                     <p>34% Pick rate</p>
@@ -30,4 +30,4 @@ const MatchesPage = () => {
   );
 };
 
-export default MatchesPage;
+export default CompetitivePage;

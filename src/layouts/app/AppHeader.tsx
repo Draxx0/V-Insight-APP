@@ -1,13 +1,14 @@
-import { useAccountStore } from '../../store/account.store';
 import Separator from '../../components/common/Separator';
-import { FALLBACK_CARD } from '../../constants';
 import Avatar from '../../components/containers/Avatar';
 import ReloadData from '../../components/containers/UpdataData';
+import { FALLBACK_CARD } from '../../constants';
+import { FALLBACK_PLAYER } from "../../constants/ui/fallbacks.constants";
+import { useAccountStore } from '../../store/account.store';
 
 const AppHeader = () => {
   const { account } = useAccountStore();
   return (
-    <header className="h-[40vh] flex gap-8 text-white">
+    <header className="h-[50vh] flex gap-8 text-white">
       <div className="relative overflow-hidden">
         <img
           src={(account && account.account_card_large) || FALLBACK_CARD.LARGE}
@@ -20,8 +21,8 @@ const AppHeader = () => {
         <div className="space-y-6">
           <div className="flex justify-between items-center">
             <div className="flex items-end gap-4">
-              <p className="text-3xl">Kowalskitkat</p>
-              <p className="text-neutral-500 text-2xl">#4005</p>
+              <p className="text-3xl">{(account && account.account_username) || FALLBACK_PLAYER.account_name}</p>
+              <p className="text-neutral-500 text-2xl">{(account && account.account_tag) || FALLBACK_PLAYER.account_tag}</p>
             </div>
 
             <div className="flex items-center gap-3">
@@ -87,6 +88,7 @@ const AppHeader = () => {
             </div>
             <Separator type="vertical" className="h-[150px]" />
           </div>
+          <Separator />
         </div>
       </div>
     </header>

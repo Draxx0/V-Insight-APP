@@ -1,18 +1,18 @@
 export const TABS = {
-  MATCHES: {
-    text: 'Matches',
-    path: '/',
+  UNRATED: {
+    text: "Unrated",
+    path: "/unrated",
   },
-  STATS: {
-    text: 'Stats',
-    path: '/stats',
+  COMPETITIVE: {
+    text: "Competitive",
+    path: "/competitive",
   },
-  SPLITS: {
-    text: 'Splits',
-    path: '/splits',
+  SWIFTPLAY: {
+    text: "Swiftplay",
+    path: "/swiftplay",
   },
-  RECORDS: {
-    text: 'Records',
-    path: '/records',
+  DEATHMATCH: {
+    text: "Deathmatch",
+    path: "/deathmatch",
   },
 } as const;

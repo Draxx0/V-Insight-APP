@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import SignupPage from '../pages/auth/Signup';
-import SigninPage from '../pages/auth/Signin';
-import MatchesPage from '../pages/Matches';
+import CompetitivePage from '../pages/Competitive';
+
 import AuthPage from '../pages/auth/AuthPage';
-import ProtectedRoute from './ProtectedRoute';
-import StatsPage from '../pages/Stats';
+import SigninPage from '../pages/auth/Signin';
+import SignupPage from '../pages/auth/Signup';
+import UnratedPage from "../pages/Unrated";
 
 const Router = () => {
   return (
@@ -12,18 +12,27 @@ const Router = () => {
       <Route
         path="/"
         element={
-          <ProtectedRoute>
-            <MatchesPage />
-          </ProtectedRoute>
+          // <ProtectedRoute>
+          <Navigate to="/unrated" />
+          // </ProtectedRoute>
         }
       />
 
-      <Route path="/stats" element={<StatsPage />} />
+      <Route
+        path="/unrated"
+        element={
+          // <ProtectedRoute>
+          <UnratedPage />
+          // </ProtectedRoute>
+        }
+      />
+
+      <Route path="/competitive" element={<CompetitivePage />} />
 
       <Route path="/auth" element={<AuthPage />} />
       <Route path="/auth/signup" element={<SignupPage />} />
       <Route path="/auth/signin" element={<SigninPage />} />
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<Navigate to="/unrated" />} />
     </Routes>
   );
 };
